@@ -22,8 +22,8 @@ OLLAMA_PID=$!
 sleep 10
 
 # Pull Qwen model
-echo "Pulling Qwen 3 8B model..."
-ollama pull qwen3:8b
+echo "Pulling Qwen 3.5 9B model..."
+ollama pull qwen3.5:9b
 
 # Verify ollama is working
 echo "Verifying ollama..."
@@ -34,15 +34,8 @@ echo "Installing uv..."
 curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
 
-# Clone or use mounted repo
-if [ -d "/workspace/autoresearch" ]; then
-    cd /workspace/autoresearch
-    echo "Using mounted repo at /workspace/autoresearch"
-else
-    echo "ERROR: No repo found. Mount the autoresearch repo to /workspace/autoresearch"
-    echo "Or update this script with your git clone URL."
-    exit 1
-fi
+# Use the workspace (repo already cloned here by job config)
+cd /workspace
 
 # Install crawler dependencies (not in pyproject.toml)
 echo "Installing crawler dependencies..."
