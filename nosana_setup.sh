@@ -52,7 +52,7 @@ nvidia-smi
 echo ""
 
 # Show available VRAM
-python3 -c "
+uv run python3 -c "
 import torch
 if torch.cuda.is_available():
     props = torch.cuda.get_device_properties(0)
