@@ -57,7 +57,7 @@ import torch
 if torch.cuda.is_available():
     props = torch.cuda.get_device_properties(0)
     print(f'GPU: {props.name}')
-    print(f'Total VRAM: {props.total_mem / 1024**3:.1f} GB')
+    print(f'Total VRAM: {props.total_memory / 1024**3:.1f} GB')
 else:
     print('No CUDA GPU available!')
 "
