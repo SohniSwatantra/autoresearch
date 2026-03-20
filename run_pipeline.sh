@@ -11,7 +11,7 @@ echo ""
 echo "=== PHASE 1: Crawling MCP ecosystem ==="
 echo "This collects data from GitHub, npm, PyPI, Reddit, etc."
 echo ""
-python3 mcp_researcher.py
+uv run python3 mcp_researcher.py
 
 echo ""
 echo "Phase 1 complete. Results in results/ and corpus/"
@@ -21,7 +21,7 @@ echo ""
 echo "=== PHASE 2: Preparing training data ==="
 echo "Training BPE tokenizer and creating parquet shards..."
 echo ""
-python3 prepare_mcp.py
+uv run python3 prepare_mcp.py
 
 echo ""
 echo "Phase 2 complete. Training data ready."
@@ -54,4 +54,4 @@ echo ""
 echo "Starting autonomous agent (Qwen via ollama)..."
 echo "Press Ctrl+C to stop."
 echo ""
-python3 agent.py
+uv run python3 agent.py
