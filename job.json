@@ -17,7 +17,7 @@
         "cmd": [
           "/bin/bash",
           "-c",
-          "apt-get update && apt-get install -y git curl python3 python3-pip python3-venv wget && curl -fsSL https://ollama.com/install.sh | sh && ollama serve & sleep 10 && ollama pull qwen3:8b && curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH=\"$HOME/.local/bin:$PATH\" && cd /workspace && git clone https://github.com/YOUR_USERNAME/autoresearch.git . && pip install requests beautifulsoup4 pandas && uv sync && bash run_pipeline.sh"
+          "apt-get update && apt-get install -y git curl python3 python3-pip python3-venv wget && curl -fsSL https://ollama.com/install.sh | sh && ollama serve & sleep 10 && ollama pull qwen3:8b && curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH=\"$HOME/.local/bin:$PATH\" && cd /workspace && git clone https://github.com/SohniSwatantra/autoresearch.git . && pip install requests beautifulsoup4 pandas && uv sync && bash run_pipeline.sh"
         ],
         "expose": 8888
       }
