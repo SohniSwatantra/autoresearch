@@ -9,7 +9,7 @@ echo "=============================================="
 echo "Installing system dependencies..."
 apt-get update && apt-get install -y \
     git curl python3 python3-pip python3-venv wget \
-    build-essential
+    build-essential zstd
 
 # Install ollama
 echo "Installing ollama..."
