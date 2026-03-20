@@ -21,3 +21,7 @@ dev/
 
 # Results file
 results.tsv
+
+# MCP pipeline outputs
+corpus/
+run.log

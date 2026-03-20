@@ -1,0 +1,115 @@
+{
+  "version": "1.0",
+  "description": "MCP ecosystem research task definitions for mcp_researcher.py",
+  "tasks": [
+    {
+      "id": "github_official",
+      "name": "Official MCP Repos",
+      "source": "github",
+      "target": "orgs/modelcontextprotocol/repos",
+      "priority": 1,
+      "description": "Official repos from the modelcontextprotocol GitHub org"
+    },
+    {
+      "id": "github_topic",
+      "name": "MCP Server Topic Repos",
+      "source": "github",
+      "target": "search/repositories?q=topic:mcp-server",
+      "priority": 1,
+      "description": "All GitHub repos tagged with mcp-server topic"
+    },
+    {
+      "id": "github_search",
+      "name": "Model Context Protocol Search",
+      "source": "github",
+      "target": "search/repositories?q=model+context+protocol",
+      "priority": 2,
+      "description": "Broader search for repos mentioning model context protocol"
+    },
+    {
+      "id": "npm_packages",
+      "name": "npm MCP Packages",
+      "source": "npm",
+      "queries": ["mcp-server", "model-context-protocol", "@modelcontextprotocol"],
+      "priority": 1,
+      "description": "MCP-related packages on npm registry"
+    },
+    {
+      "id": "pypi_packages",
+      "name": "PyPI MCP Packages",
+      "source": "pypi",
+      "queries": ["mcp-server", "model-context-protocol", "mcp-client"],
+      "priority": 2,
+      "description": "MCP-related packages on PyPI"
+    },
+    {
+      "id": "mcpservers_org",
+      "name": "mcpservers.org Directory",
+      "source": "web",
+      "target": "https://mcpservers.org",
+      "priority": 1,
+      "description": "Server directory from mcpservers.org"
+    },
+    {
+      "id": "mcp_spec",
+      "name": "MCP Specification",
+      "source": "web",
+      "target": "https://spec.modelcontextprotocol.io",
+      "priority": 1,
+      "description": "Official MCP protocol specification"
+    },
+    {
+      "id": "reddit_mcpservers",
+      "name": "r/MCPservers Posts",
+      "source": "reddit",
+      "subreddit": "MCPservers",
+      "priority": 2,
+      "description": "Community posts from r/MCPservers"
+    },
+    {
+      "id": "reddit_claudeai",
+      "name": "r/ClaudeAI MCP Posts",
+      "source": "reddit",
+      "subreddit": "ClaudeAI",
+      "query": "MCP",
+      "priority": 3,
+      "description": "MCP-related posts from r/ClaudeAI"
+    },
+    {
+      "id": "anthropic_blog",
+      "name": "Anthropic Blog",
+      "source": "web",
+      "target": "https://www.anthropic.com/news",
+      "priority": 2,
+      "description": "Anthropic blog posts about MCP"
+    }
+  ],
+  "research_targets": {
+    "companies": "Companies behind MCP servers + contact details",
+    "key_people": "David Soria Parra (Anthropic), other devrels/PMs",
+    "sponsorship": "Companies actively promoting MCP servers",
+    "popular_servers": "By stars, downloads, community mentions",
+    "pain_points": "Current challenges and common issues",
+    "protocol_changes": "Latest spec updates and proposals",
+    "opportunities": "Ecosystem gaps and underserved areas"
+  },
+  "output": {
+    "structured": {
+      "companies.csv": "company, website, servers, contacts",
+      "servers.csv": "server, repo, stars, category, company",
+      "contacts.csv": "people: name, role, company, socials",
+      "sponsorship_targets.md": "ranked list for outreach"
+    },
+    "corpus": {
+      "directory": "corpus/",
+      "format": "text files with structured prose",
+      "includes": [
+        "Server descriptions",
+        "Company profiles",
+        "Protocol documentation",
+        "Q&A pairs",
+        "Newsletter-style writing samples"
+      ]
+    }
+  }
+}
