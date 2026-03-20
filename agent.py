@@ -23,7 +23,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL = "qwen3:8b"
+MODEL = "qwen3.5:9b"
 TRAIN_SCRIPT = "train.py"
 RESULTS_FILE = "results.tsv"
 RUN_LOG = "run.log"

@@ -726,7 +726,7 @@ def analyze_with_qwen(data_summary):
     Falls back gracefully if ollama is not available."""
     try:
         resp = requests.post("http://localhost:11434/api/generate", json={
-            "model": "qwen3:8b",
+            "model": "qwen3.5:9b",
             "prompt": f"""Analyze this MCP ecosystem data and provide:
 1. Key trends in the MCP ecosystem
 2. Most promising sponsorship targets for an MCP newsletter
